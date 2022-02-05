@@ -19,6 +19,8 @@ jobs:
     steps:
       - name: Checkout 
         uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
 
       - name: Setup Python Environment
         uses: actions/setup-python@v2
@@ -32,16 +34,13 @@ jobs:
       - name: Execute Script and Push
         run: |
           python main.py ${START_DATE} ${END_DATE}
-          git config --global user.name 'dSquadAdmin'
-          git config --global user.email 'dSquadAdmin@users.noreply.github.com'
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
-          git checkout "${GITHUB_REF:11}"
-          git add .
-          git commit -am "Data updated"
-          git push origin master
         env:
           START_DATE: ${{ github.event.inputs.start }}
           END_DATE: ${{ github.event.inputs.end }}
 
-          
-
+      - name: Push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Files updated
+          commit_user_name: dSquadAdmin
+          commit_user_email: keshavbist19@gmail.com
