@@ -5,16 +5,19 @@ on:
         description: "Start Date"
         required: true
         default: "warning"
-        type: date
+        type: string
       endDate:
         description: "End Date"
         required: true
         default: "warning"
-        type: date
+        type: string
 
 jobs:
   run-checkout:
     runs-on: ubuntu-latest
     steps:
-      - run: python --version
-#python3 main.py ${{ github.event.inputs.startDate }} ${{ github.event.inputs.startDate }}
+      - uses: actions/checkout@v2
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.ref }}
+      - run: python3 main.py ${{ github.event.inputs.startDate }} ${{ github.event.inputs.startDate }}
