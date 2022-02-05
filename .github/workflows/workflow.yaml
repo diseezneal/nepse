@@ -1,4 +1,4 @@
-name: Auto Scrape
+name: Scrap data for today
 
 on:
   schedule:
