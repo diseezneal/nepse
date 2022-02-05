@@ -16,6 +16,5 @@ jobs:
   run-checkout:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-        python --version
+      - run: python --version
 #python3 main.py ${{ github.event.inputs.startDate }} ${{ github.event.inputs.startDate }}
