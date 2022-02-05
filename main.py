@@ -55,7 +55,7 @@ if len(sys.argv) < 3:
     print('Invalid no of arguments.')
     print(f'Usagage: python main.py <start_date> <end_date>')
     print(f'Example Usage: python main.py 2010-01-01 2010-01-20')
-    exit(0)
+    exit(-1)
 
 dates = pd.date_range(start=sys.argv[1], end=sys.argv[2])
 
@@ -64,6 +64,10 @@ dates = pd.date_range(start=sys.argv[1], end=sys.argv[2])
 dates = [(date) for date in dates if (
     date.weekday() < 4 or date.weekday() > 5
 )]
+
+if len(dates) == 0:
+    print(f'Date {sys.argv[1]} is invalid')
+    exit(-1)
 
 for date in dates:
     dt = f"{date:%Y-%m-%d}"

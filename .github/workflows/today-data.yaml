@@ -1,0 +1,37 @@
+name: Auto Pull Data For Today
+
+on:
+  schedule:
+    - cron: '15 10 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 
+        uses: actions/checkout@v2
+
+      - name: Setup Python Environment
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+      
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+      
+      - name: Execute Script
+        run: |
+          python main.py ${START_DATE} ${END_DATE}
+        env:
+          START_DATE: $(date '+%Y-%m-%d')
+          END_DATE: $(date '+%Y-%m-%d')
+      - name: Commit and Push Files
+        run: |
+           git config --local user.email "keshavbist19@gmail.com"
+           git config --local user.name "dsquadadmin"        
+           git add .
+           git commit -m "Data updated successfully" -a
+           git push origin main

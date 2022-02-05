@@ -1,12 +1,18 @@
-name: Scrap data for today
+name: Auto Pull Data For Today
 
 on:
-  schedule:
-    - cron: '15 10 * * *'
   workflow_dispatch:
+    inputs:
+      start:
+        description: 'Start Date'     
+        required: true
+        default: 'YYYY-MM-DD'
+      end:
+        description: 'End Date'     
+        required: true
+        default: 'YYYY-MM-DD'
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
 
@@ -23,9 +29,12 @@ jobs:
         run: |
           pip install -r requirements.txt
       
-      - name: Execute Scraping Script
+      - name: Execute Script
         run: |
-          python main.py $(date '+%Y-%m-%d') $(date '+%Y-%m-%d')
+          python main.py ${START_DATE} ${END_DATE}
+        env:
+          START_DATE: ${{ github.event.inputs.start }}
+          END_DATE: ${{ github.event.inputs.end }}
       - name: Commit and Push Files
         run: |
            git config --local user.email "keshavbist19@gmail.com"
