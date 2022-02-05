@@ -17,5 +17,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          python main.py ${{ github.event.inputs.startDate }} ${{ github.event.inputs.startDate }}
-  
+        python --version
+#python3 main.py ${{ github.event.inputs.startDate }} ${{ github.event.inputs.startDate }}
