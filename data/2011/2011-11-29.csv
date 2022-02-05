@@ -1,0 +1,81 @@
+S.N.,Traded Companies,No. Of Transaction,Max Price,Min Price,Closing Price,Traded Shares,Amount,Previous Closing,Difference Rs.
+1,Ace Development Bank Ltd.,1,119.00,119.00,119.00,110.00,13090.00,120.00,-1.00
+2,Agriculture Development Bank Limited,11,125.00,117.00,125.00,723.00,86474.00,118.00,7.00
+3,Alpine Development Bank Limited,25,104.00,100.00,100.00,330.00,33570.00,103.00,-3.00
+4,Api Finance Limited,1,124.00,124.00,124.00,30.00,3720.00,126.00,-2.00
+5,Araniko Development Bank Limited,30,89.00,87.00,88.00,920.00,80760.00,88.00,0.00
+6,Arun Valley Hydropower Development Co. Ltd.,3,340.00,334.00,334.00,155.00,52452.00,339.00,-5.00
+7,Asian Life Insurance Co. Limited,28,169.00,167.00,168.00,460.00,77150.00,165.00,3.00
+8,Bank of Asia Nepal Limited,17,167.00,162.00,164.00,2396.00,393749.00,170.00,-6.00
+9,Bank of Kathmandu Ltd.,17,434.00,424.00,430.00,4380.00,1866488.00,426.00,4.00
+10,Best Finance Company Ltd.,1,494.00,494.00,494.00,20.00,9880.00,485.00,9.00
+11,Biratlaxmi Bikas Bank Limited,94,136.00,131.00,136.00,2476.00,326240.00,129.00,7.00
+12,Chilime Hydropower Company Limited,796,785.00,774.00,778.00,16590.00,12928660.00,782.00,-4.00
+13,Citizen Bank International Limited,15,170.00,166.00,170.00,1290.00,216340.00,168.00,2.00
+14,Clean Energy Development Bank Limited,3,138.00,135.00,135.00,198.00,27078.00,138.00,-3.00
+15,Deva Bikas Bank Limited,2,91.00,90.00,91.00,40.00,3620.00,89.00,2.00
+16,Everest Bank Limited,6,775.00,751.00,775.00,316.00,238412.00,770.00,5.00
+17,Excel Development Bank Ltd.,3,286.00,284.00,286.00,282.00,80492.00,291.00,-5.00
+18,Gandaki Bikas Bank Limited,134,114.00,113.00,114.00,2930.00,331330.00,112.00,2.00
+19,Garima Bikas Bank Limited,14,115.00,113.00,115.00,430.00,49370.00,115.00,0.00
+20,Gaurishankar Development Bank Ltd.,4,94.00,92.00,94.00,40.00,3710.00,93.00,1.00
+21,Global IME Bank Limited,5,162.00,159.00,162.00,1125.00,180950.00,161.00,1.00
+22,Grand Bank Nepal Limited,3,130.00,126.00,130.00,250.00,32100.00,124.00,6.00
+23,Gurans Life Insurance Company Ltd.,45,102.00,101.00,102.00,1380.00,140720.00,101.00,1.00
+24,Himalayan Bank Limited,2,605.00,600.00,605.00,1560.00,938695.00,600.00,5.00
+25,Himalayan Finance Limited (Bittiya Sanstha),9,64.00,59.00,64.00,230.00,13960.00,60.00,4.00
+26,Jyoti Bikas Bank Limited,25,100.00,97.00,97.00,2170.00,213550.00,98.00,-1.00
+27,Kamana Sewa Bikas Bank Limited,42,113.00,110.00,112.00,1350.00,151320.00,110.00,2.00
+28,Kankai Bikas Bank Ltd.,7,92.00,92.00,92.00,70.00,6440.00,93.00,-1.00
+29,Karnali Development Bank Limited,7,73.00,72.00,72.00,200.00,14500.00,72.00,0.00
+30,Kumari Bank Limited,9,220.00,216.00,217.00,3579.00,779586.00,222.00,-5.00
+31,Kumari Bank Limited Promotor Share,13,102.00,100.00,100.00,140.00,14220.00,100.00,0.00
+32,Laxmi Bank Limited,1,265.00,265.00,265.00,60.00,15900.00,260.00,5.00
+33,Lumbini Bank Limited,10,166.00,162.00,164.00,1956.00,319790.00,162.00,2.00
+34,Lumbini Bikas Bank Ltd.,8,113.00,111.00,113.00,160.00,18000.00,111.00,2.00
+35,Lumbini Finance Ltd.,1,136.00,136.00,136.00,17.00,2312.00,134.00,2.00
+36,Lumbini General Insurance Co. Ltd.,1,98.00,98.00,98.00,500.00,49000.00,99.00,-1.00
+37,Machhapuchhre Bank Limited,2,115.00,114.00,115.00,261.00,29854.00,115.00,0.00
+38,Mahakali Bikas Bank Limited,1,113.00,113.00,113.00,10.00,1130.00,113.00,0.00
+39,Mahalaxmi Bikas Bank Ltd.,24,74.00,73.00,73.00,910.00,66450.00,73.00,0.00
+40,Miteri Development Bank Limited,10,104.00,100.00,100.00,400.00,41520.00,103.00,-3.00
+41,Muktinath Bikas Bank Ltd.,456,162.00,156.00,160.00,13200.00,2108540.00,160.00,0.00
+42,Nabil Bank Limited,3,875.00,865.00,865.00,211.00,182815.00,872.00,-7.00
+43,National Hydro Power Company Limited,6,55.00,54.00,54.00,7500.00,410000.00,56.00,-2.00
+44,Nepal Bangladesh Bank Limited,3,137.00,133.00,137.00,75.00,10095.00,131.00,6.00
+45,Nepal Doorsanchar Comapany Limited,7,425.00,422.00,424.00,1660.00,702940.00,420.00,4.00
+46,Nepal Insurance Co. Ltd.,2,285.00,280.00,280.00,107.00,30245.00,290.00,-10.00
+47,Nepal Investment Bank Limited,5,425.00,421.00,425.00,305.00,128830.00,422.00,3.00
+48,Nepal SBI Bank Limited,2,450.00,441.00,441.00,1313.00,588033.00,450.00,-9.00
+49,Nerude Laghubita Bikas Bank Limited,2,520.00,520.00,520.00,40.00,20800.00,510.00,10.00
+50,NIC Asia Bank Ltd.,4,422.00,414.00,414.00,376.00,157272.00,422.00,-8.00
+51,NMB Bank Limited,10,172.00,165.00,165.00,1260.00,211207.00,170.00,-5.00
+52,Om Development Bank Ltd.,1,153.00,153.00,153.00,50.00,7650.00,150.00,3.00
+53,Om Finance Ltd.,4,201.00,195.00,199.00,40.00,7930.00,192.00,7.00
+54,Oriental Hotels Limited,16,76.00,73.00,75.00,310.00,23210.00,72.00,3.00
+55,Pathibhara Bikas Bank Limited,1,96.00,96.00,96.00,10.00,960.00,95.00,1.00
+56,Prabhu  Bank Limited,1,126.00,126.00,126.00,75.00,9450.00,126.00,0.00
+57,Prime Commercial Bank Ltd.,6,193.00,190.00,190.00,384.00,73032.00,196.00,-6.00
+58,Prime Life Insurance Company Limited,3,167.00,165.00,165.00,30.00,4990.00,165.00,0.00
+59,Public Development Bank Limited,9,64.00,59.00,63.00,1490.00,94550.00,60.00,3.00
+60,Rastriya Beema Company Limited,41,157.00,157.00,157.00,1086.00,170502.00,160.00,-3.00
+61,Rastriya Beema Company Limited,5,1368.00,1315.00,1315.00,292.00,392784.00,1394.00,-79.00
+62,Resunga Bikas Bank Limited,4,176.00,176.00,176.00,80.00,14080.00,179.00,-3.00
+63,Sewa Bikas Bank Limited,5,124.00,120.00,120.00,124.00,15277.00,126.00,-6.00
+64,Shree Investment Finance Co. Ltd.,1,202.00,202.00,202.00,30.00,6060.00,237.00,-35.00
+65,Siddharth Finance Ltd.,1,154.00,154.00,154.00,100.00,15400.00,157.00,-3.00
+66,Siddhartha Bank Limited,11,235.00,229.00,230.00,1359.00,314220.00,235.00,-5.00
+67,Siddhartha Development Bank Ltd.,3,93.00,92.00,93.00,770.00,70940.00,93.00,0.00
+68,Soaltee Hotel Limited,2,192.00,189.00,192.00,834.00,159033.00,140.00,52.00
+69,Standard Chartered Bank Limited,8,1345.00,1335.00,1344.00,742.00,994473.00,1340.00,4.00
+70,Standard Finance Ltd.,3,98.00,96.00,96.00,778.00,75144.00,99.00,-3.00
+71,Subha Laxmi Finance Co. Ltd.,33,110.00,108.00,108.00,660.00,71960.00,108.00,0.00
+72,Sunrise Bank Limited,3,134.00,133.00,134.00,234.00,31196.00,132.00,2.00
+73,Surya Life Insurance Company Limited,3,112.00,112.00,112.00,90.00,10080.00,113.00,-1.00
+74,Swabalamban Laghubitta Bittiya Sanstha Limited,2,225.00,224.00,225.00,725.00,163050.00,223.00,2.00
+75,Tinau Development Bank Limited,2,100.00,100.00,100.00,20.00,2000.00,99.00,1.00
+76,Udhyam Bikas Bank Limited,1,78.00,78.00,78.00,30.00,2340.00,77.00,1.00
+77,United Finance Ltd.,1,135.00,135.00,135.00,13.00,1755.00,135.00,0.00
+78,Valley Finance Limited,6,104.00,103.00,104.00,60.00,6190.00,104.00,0.00
+79,Western Development Bank Limited,2,102.00,102.00,102.00,20.00,2040.00,104.00,-2.00
+80,Zenith Finance Limited,2,113.00,111.00,111.00,30.00,3370.00,115.00,-4.00
