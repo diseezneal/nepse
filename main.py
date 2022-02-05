@@ -7,11 +7,13 @@ from bs4 import BeautifulSoup
 from urllib.request import urlopen
 import numpy as np
 import sys
+import _thread
 
 
 def extract_data(day):
     url = f'http://nepalstock.com/todaysprice?_limit=500&startDate={day}'
-    print(f'Data for day: {day}, URL:{url}')
+    print(f'Data for day: {day}, URL: {url}')
+    year = day.split('-')[0]
     data = []
 
     page = urlopen(url)
@@ -43,11 +45,12 @@ def extract_data(day):
     try:
         dataFrame = pd.DataFrame(data=data, columns=list_header)
         dataFrame = dataFrame[dataFrame['S.N.'].apply(lambda x: x.isnumeric())]
-        dataFrame.to_csv(f'data/{day}.csv', index=False)
+        dataFrame.to_csv(f'data/{year}/{day}.csv', index=False)
     except:
         print(f'no data found on {day}')
-
-    sleep(10*random())
+    # sleep for few seconds before sending another request
+    # to avoid blocking
+    sleep(2*random())
 
 
 if len(sys.argv) < 3:
@@ -66,4 +69,5 @@ dates = [(date) for date in dates if (
 
 for date in dates:
     dt = f"{date:%Y-%m-%d}"
-    extract_data(day=dt)
+    _thread.start_new_thread(extract_data, (dt,))
+    sleep(0.5)
