@@ -1,4 +1,5 @@
 # Importing the required modules
+from calendar import weekday
 from random import random
 from time import sleep
 import pandas as pd
@@ -8,9 +9,9 @@ import numpy as np
 import sys
 
 
-def extract_data(start_date):
-    url = f'http://nepalstock.com/todaysprice?_limit=500&startDate={start_date}'
-    print(f'URL:{url}')
+def extract_data(day):
+    url = f'http://nepalstock.com/todaysprice?_limit=500&startDate={day}'
+    print(f'Data for day: {day}, URL:{url}')
     data = []
 
     page = urlopen(url)
@@ -42,9 +43,9 @@ def extract_data(start_date):
     try:
         dataFrame = pd.DataFrame(data=data, columns=list_header)
         dataFrame = dataFrame[dataFrame['S.N.'].apply(lambda x: x.isnumeric())]
-        dataFrame.to_csv(f'data/{start_date}.csv', index=False)
+        dataFrame.to_csv(f'data/{day}.csv', index=False)
     except:
-        print(f'no data found on {start_date}')
+        print(f'no data found on {day}')
 
     sleep(10*random())
 
@@ -56,10 +57,13 @@ if len(sys.argv) < 3:
     exit(0)
 
 dates = pd.date_range(start=sys.argv[1], end=sys.argv[2])
-# filter firday and saturday as there is no transaction on those days
+
+# filter out firday and saturday
+# as there is no transaction
 dates = [(date) for date in dates if (
-    date.weekday() < 4 or date.weekday() > 5)]
+    date.weekday() < 4 or date.weekday() > 5
+)]
 
 for date in dates:
     dt = f"{date:%Y-%m-%d}"
-    extract_data(start_date=dt)
+    extract_data(day=dt)
