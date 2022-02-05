@@ -1,11 +1,9 @@
 # Importing the required modules
-from calendar import weekday
 from random import random
 from time import sleep
 import pandas as pd
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
-import numpy as np
 import sys
 import _thread
 

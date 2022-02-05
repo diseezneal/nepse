@@ -1,33 +1,35 @@
+name: Auto Scrape
+
 on:
+  schedule:
+    - cron: '15 10 * * *'
   workflow_dispatch:
-    inputs:
-      startDate:
-        description: "Start Date"
-        required: true
-        default: "warning"
-        type: string
-      endDate:
-        description: "End Date"
-        required: true
-        default: "warning"
-        type: string
 
 jobs:
-  run-checkout:
-    runs-on: ubuntu-latest
-    steps:
-      steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
-        run: cd ./nepse
-      
-      - name: fetch data
-        run: python main.py ${{ github.event.inputs.startDate }} ${{ github.event.inputs.startDate }}
 
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v8
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 
+        uses: actions/checkout@v2
+
+      - name: Setup Python Environment
+        uses: actions/setup-python@v2
         with:
-          author_name: dsquadadmin
-          author_email: keshavbist19@gmail.com
-          message: Data upto ${{ github.event.inputs.startDate }}
-          add: './data'
+          python-version: 3.7
+      
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+      
+      - name: Execute Scraping Script
+        run: |
+          python main.py $(date '+%Y-%m-%d') $(date '+%Y-%m-%d')
+      - name: Commit and Push Files
+        run: |
+           git config --local user.email "keshavbist19@gmail.com"
+           git config --local user.name "dsquadadmin"        
+           git add .
+           git commit -m "Data updated successfully" -a
+           git push origin main
