@@ -29,18 +29,19 @@ jobs:
         run: |
           pip install -r requirements.txt
       
-      - name: Execute Script
+      - name: Execute Script and Push
         run: |
           python main.py ${START_DATE} ${END_DATE}
-        env:
-          START_DATE: ${{ github.event.inputs.start }}
-          END_DATE: ${{ github.event.inputs.end }}
-      - name: Commit and Push Files
-        run: |
           git config --global user.name 'dSquadAdmin'
           git config --global user.email 'dSquadAdmin@users.noreply.github.com'
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
           git checkout "${GITHUB_REF:11}"
           git add .
           git commit -am "Data updated"
-          git push
+          git push origin master
+        env:
+          START_DATE: ${{ github.event.inputs.start }}
+          END_DATE: ${{ github.event.inputs.end }}
+
+          
+
