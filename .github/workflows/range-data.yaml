@@ -1,4 +1,4 @@
-name: Auto Pull Data For Today
+name: Manual Pull Data For Given date range
 
 on:
   workflow_dispatch:
