@@ -43,4 +43,4 @@ jobs:
         with:
           commit_message: Files updated
           commit_user_name: dSquadAdmin
-          commit_user_email: keshavbist19@gmail.com
+          commit_user_email: dSquadAdmin@users.noreply.github.com
