@@ -66,7 +66,7 @@ dates = [(date) for date in dates if (
 )]
 
 if len(dates) == 0:
-    print(f'Date {sys.argv[1]} is invalid')
+    print(f'Date Range {sys.argv[1]} to {sys.argv[2]} is invalid!')
     exit(-1)
 
 for date in dates:
