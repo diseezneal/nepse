@@ -49,7 +49,16 @@ def extract_data(start_date):
     sleep(10*random())
 
 
-dates = pd.date_range(start='2010-05-30', end='2010-05-31')
+if len(sys.argv) < 3:
+    print('Invalid no of arguments.')
+    print(f'Usagage: python main.py <start_date> <end_date>')
+    print(f'Example Usage: python main.py 2010-01-01 2010-01-20')
+    exit(0)
+
+dates = pd.date_range(start=sys.argv[1], end=sys.argv[2])
+# filter firday and saturday as there is no transaction on those days
+dates = [(date) for date in dates if (
+    date.weekday() < 4 or date.weekday() > 5)]
 
 for date in dates:
     dt = f"{date:%Y-%m-%d}"
