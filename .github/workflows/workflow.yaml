@@ -16,10 +16,18 @@ jobs:
   run-checkout:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        run: cd ./nepse
+      
+      - name: fetch data
+        run: python main.py ${{ github.event.inputs.startDate }} ${{ github.event.inputs.startDate }}
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v8
         with:
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-          ref: ${{ github.event.pull_request.head.ref }}
-      - run: |
-        ls -al
-#      python3 main.py ${{ github.event.inputs.startDate }} ${{ github.event.inputs.startDate }}
+          author_name: dsquadadmin
+          author_email: keshavbist19@gmail.com
+          message: Data upto ${{ github.event.inputs.startDate }}
+          add: './data'
