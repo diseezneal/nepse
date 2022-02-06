@@ -2,7 +2,7 @@ name: Auto Pull Data For Single Day
 
 on:
   schedule:
-    - cron: '15 10 * * *'
+    - cron: '15 10 * * 0-4'
   workflow_dispatch:
 
 jobs:
