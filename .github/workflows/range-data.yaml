@@ -33,6 +33,7 @@ jobs:
       
       - name: Execute Script and Push
         run: |
+          chmod 777 ./data -R
           python main.py ${START_DATE} ${END_DATE}
         env:
           START_DATE: ${{ github.event.inputs.start }}
@@ -41,6 +42,6 @@ jobs:
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Files updated
+          commit_message: Data up to ${{ github.event.inputs.end }}
           commit_user_name: dSquadAdmin
           commit_user_email: dSquadAdmin@users.noreply.github.com
