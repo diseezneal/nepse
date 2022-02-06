@@ -6,19 +6,20 @@ import threading
 from time import sleep
 import pandas as pd
 from bs4 import BeautifulSoup
-from urllib.request import Request, urlopen
+from urllib.request import urlopen
+from urllib.parse import urlencode
 import sys
 
 
 URL = "http://nepalstock.com/todaysprice"
-METHOD = "POST"
+METHOD = "GET"
 
 
 class ExtractionThread (threading.Thread):
     def __init__(self, date, url, payload):
         threading.Thread.__init__(self)
         self.date = date
-        self.url = url
+        self.url = f'{url}?{urlencode(payload)}'
         self.payload = payload
 
     def run(self):
@@ -29,9 +30,7 @@ class ExtractionThread (threading.Thread):
     def extract_data(self):
         year = self.date.split('-')[0]
         data = []
-        request = Request(self.url, method=METHOD)
-        payload = json.dumps(self.payload, indent=2).encode('utf-8')
-        page = urlopen(request, data=payload)
+        page = urlopen(self.url)
         html_bytes = page.read()
         html = html_bytes.decode("utf-8")
 
@@ -94,7 +93,7 @@ for date in dates:
     if not os.path.isdir(f'./data/{year}'):
         os.mkdir(f'./data/{year}')
     t = ExtractionThread(date=dt, url=URL, payload={
-                         "_limit": "500", "startDate": dt})
+                         "_limit": 500, "startDate": dt})
     t.start()
     threads.append(t)
 
